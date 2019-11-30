@@ -1,8 +1,9 @@
 <template>
   <div class='header'>
     <div class='city'>
-      <span class='iconfont cityList'>&#xe634;</span>
-      <span class='cityName'>city</span>
+      <span class='iconfont city-list'>&#xe634;</span>
+      <span class='city-name'>邯郸</span>
+      <span class='iconfont future-weather'>&#xe714;</span>
     </div>
     <div class='date'>2019/11/30</div>
     <div class='week'>星期六</div>
@@ -19,15 +20,21 @@ export default {
 .header
   display: flex
   flex-direction: column
-  padding: .4rem
-  color: #fff
-  background: rgb(137, 196, 244)
+  padding: .2rem .4rem
   .city
+    display: flex
+    flex-direction: row
     height: 1rem
-    .cityList
+    line-height: 1rem
+    .city-list
+      width: .8rem
       font-size: .5rem
-    .cityName
-      font-size: 1rem
+    .city-name
+      flex: 1
+      font-size: .8rem
+    .future-weather
+      font-size: .5rem
+      text-align: right
   .date
     text-align: right
     margin-bottom: .2rem
