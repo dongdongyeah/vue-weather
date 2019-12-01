@@ -1,7 +1,9 @@
 <template>
   <div class='header'>
     <div class='city'>
-      <span class='iconfont city-list'>&#xe634;</span>
+      <router-link to='/city'>
+        <span class='iconfont city-list'>&#xec70;</span>
+      </router-link>
       <span class='city-name'>邯郸</span>
       <span class='iconfont day-night'>&#xe666;</span>
     </div>
@@ -29,6 +31,8 @@ export default {
     .city-list
       width: .8rem
       font-size: .5rem
+      margin-right: .2rem
+      color: #fff
     .city-name
       flex: 1
       font-size: .8rem
