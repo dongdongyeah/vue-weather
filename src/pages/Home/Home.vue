@@ -3,6 +3,7 @@
     <home-header></home-header>
     <real-time></real-time>
     <today></today>
+    <forecast></forecast>
     <living-index></living-index>
   </div>
 </template>
@@ -11,6 +12,7 @@
 import HomeHeader from '@/pages/Home/components/Header'
 import RealTime from '@/pages/Home/components/RealTime'
 import Today from '@/pages/Home/components/Today'
+import Forecast from '@/pages/Home/components/Forecast'
 import LivingIndex from '@/pages/Home/components/LivingIndex'
 export default {
   name: 'Home',
@@ -18,6 +20,7 @@ export default {
     HomeHeader,
     RealTime,
     Today,
+    Forecast,
     LivingIndex
   }
 }
