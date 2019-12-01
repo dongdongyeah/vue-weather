@@ -3,7 +3,7 @@
     <div class='city'>
       <span class='iconfont city-list'>&#xe634;</span>
       <span class='city-name'>邯郸</span>
-      <span class='iconfont future-weather'>&#xe714;</span>
+      <span class='iconfont day-night'>&#xe666;</span>
     </div>
     <div class='date'>2019/11/30</div>
     <div class='week'>星期六</div>
@@ -32,7 +32,7 @@ export default {
     .city-name
       flex: 1
       font-size: .8rem
-    .future-weather
+    .day-night
       font-size: .5rem
       text-align: right
   .date
