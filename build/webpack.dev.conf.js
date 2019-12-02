@@ -43,6 +43,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     watchOptions: {
       poll: config.dev.poll,
     }
+
   },
   plugins: [
     new webpack.DefinePlugin({

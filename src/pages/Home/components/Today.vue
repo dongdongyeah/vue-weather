@@ -1,14 +1,18 @@
 <template>
   <div class='today border-topbottom'>
     <div class='date'>今天</div>
-    <div class='temp'>0~4 ℃</div>
-    <div class='weather'>晴<span class='iconfont'>&#xe642;</span></div>
+    <div class='temp'>{{today.temperature}}</div>
+    <div class='weather'>{{today.weather}}<span class='iconfont'>&#xe642;</span></div>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'Today'
+  name: 'Today',
+  props: {
+    today: Object
+  }
 }
 </script>
 

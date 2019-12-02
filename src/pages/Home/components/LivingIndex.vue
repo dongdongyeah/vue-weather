@@ -5,32 +5,32 @@
       <div class='index border'>
         <div class='title'>穿衣指数</div>
         <div class='iconfont'>&#xe67a;</div>
-        <div class='content'>较冷</div>
+        <div class='content'>{{today.dressing_index}}</div>
       </div>
       <div class='index border'>
         <div class='title'>穿衣建议</div>
         <div class='iconfont'>&#xe608;</div>
-        <div class='content'>秋冬装</div>
+        <div class='content'>{{today.dressing_advice}}</div>
       </div>
       <div class='index border'>
         <div class='title'>紫外线强度</div>
         <div class='iconfont'>&#xe632;</div>
-        <div class='content'>中等</div>
+        <div class='content'>{{today.uv_index}}</div>
       </div>
       <div class='index border'>
         <div class='title'>洗车指数</div>
         <div class='iconfont'>&#xe69a;</div>
-        <div class='content'>较适宜</div>
+        <div class='content'>{{today.wash_index}}</div>
       </div>
       <div class='index border'>
         <div class='title'>旅游指数</div>
         <div class='iconfont'>&#xe600;</div>
-        <div class='content'>适宜</div>
+        <div class='content'>{{today.travel_index}}</div>
       </div>
       <div class='index border'>
         <div class='title'>运动指数</div>
         <div class='iconfont'>&#xe65f;</div>
-        <div class='content'>较适宜</div>
+        <div class='content'>{{today.exercise_index}}</div>
       </div>
     </div>
   </div>
@@ -38,7 +38,15 @@
 
 <script>
 export default {
-  name: 'LivingIndex'
+  name: 'LivingIndex',
+  data () {
+    return {
+      message: 'this.today.dressing_advice'
+    }
+  },
+  props: {
+    today: Object
+  }
 }
 </script>
 
@@ -71,5 +79,10 @@ export default {
       color: rgb(137, 196, 244)
     .content
       margin-top: .2rem
-      font-size: .35rem
+      font-size: .3rem
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+    .content :hover
+      color: red
 </style>

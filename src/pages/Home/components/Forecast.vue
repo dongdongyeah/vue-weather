@@ -1,47 +1,24 @@
 <template>
   <div>
     <div class='header'>天气预报</div>
-    <div class='today border-topbottom'>
-      <div class='date'>今天</div>
-      <div class='temp'>0~4 ℃</div>
-      <div class='weather'>晴<span class='iconfont'>&#xe642;</span></div>
-    </div>
-    <div class='today border-topbottom'>
-      <div class='date'>今天</div>
-      <div class='temp'>0~4 ℃</div>
-      <div class='weather'>晴<span class='iconfont'>&#xe642;</span></div>
-    </div>
-    <div class='today border-topbottom'>
-      <div class='date'>今天</div>
-      <div class='temp'>0~4 ℃</div>
-      <div class='weather'>晴<span class='iconfont'>&#xe642;</span></div>
-    </div>
-    <div class='today border-topbottom'>
-      <div class='date'>今天</div>
-      <div class='temp'>0~4 ℃</div>
-      <div class='weather'>晴<span class='iconfont'>&#xe642;</span></div>
-    </div>
-    <div class='today border-topbottom'>
-      <div class='date'>今天</div>
-      <div class='temp'>0~4 ℃</div>
-      <div class='weather'>晴<span class='iconfont'>&#xe642;</span></div>
-    </div>
-    <div class='today border-topbottom'>
-      <div class='date'>今天</div>
-      <div class='temp'>0~4 ℃</div>
-      <div class='weather'>晴<span class='iconfont'>&#xe642;</span></div>
-    </div>
-    <div class='today border-topbottom'>
-      <div class='date'>今天</div>
-      <div class='temp'>0~4 ℃</div>
-      <div class='weather'>晴<span class='iconfont'>&#xe642;</span></div>
+    <div
+     class='today border-topbottom'
+     v-for='(item, key) of futureList'
+     :key=item[key]
+    >
+      <div class='date'>{{item.date}}</div>
+      <div class='temp'>{{item.temperature}}</div>
+      <div class='weather'>{{item.weather}}<span class='iconfont'>&#xe642;</span></div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Forecast'
+  name: 'Forecast',
+  props: {
+    futureList: Object
+  }
 }
 </script>
 
@@ -56,22 +33,19 @@ export default {
 .today
   display: flex
   padding: .2rem 1rem
-  font-size: .4rem
+  font-size: .3rem
   line-height: .4rem
   background: rgb(228, 241, 254)
   color: rgb(44, 62, 80)
   background: #fff
+  text-align: center
   .date
-    width: 2rem
-  .temp
     width: 2.5rem
+  .temp
+    width: 2.3rem
   .weather
+    width: 2.5rem
     .iconfont
       margin-left: .1rem
-      font-size: .4rem
-.forecast
-  text-align: center
-  padding: .2rem 0
-  line-height: .4rem
-  font-size: .3rem
+      font-size: .3rem
 </style>

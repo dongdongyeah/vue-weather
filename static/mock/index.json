@@ -1,0 +1,113 @@
+{
+  "resultcode": "200",
+  "reason": "successed!",
+  "result": {
+    "sk": {
+      "temp": "2",
+      "wind_direction": "西南风",
+      "wind_strength": "2级",
+      "humidity": "27%",
+      "time": "20:32"
+    },
+    "today": {
+      "temperature": "-4℃~4℃",
+      "weather": "晴",
+      "weather_id": {
+        "fa": "00",
+        "fb": "00"
+      },
+      "wind": "西南风微风",
+      "week": "星期一",
+      "city": "北京",
+      "date_y": "2019年12月02日",
+      "dressing_index": "冷",
+      "dressing_advice": "天气冷，建议着棉服、羽绒服、皮夹克加羊毛衫等冬季服装。年老体弱者宜着厚棉衣、冬大衣或厚羽绒服。",
+      "uv_index": "弱",
+      "comfort_index": "",
+      "wash_index": "较适宜",
+      "travel_index": "较不宜",
+      "exercise_index": "较不宜",
+      "drying_index": ""
+    },
+    "future": {
+      "day_20191202": {
+        "temperature": "-4℃~4℃",
+        "weather": "晴",
+        "weather_id": {
+          "fa": "00",
+          "fb": "00"
+        },
+        "wind": "西南风微风",
+        "week": "星期一",
+        "date": "20191202"
+      },
+      "day_20191203": {
+        "temperature": "-4℃~7℃",
+        "weather": "晴",
+        "weather_id": {
+          "fa": "00",
+          "fb": "00"
+        },
+        "wind": "持续无风向微风",
+        "week": "星期二",
+        "date": "20191203"
+      },
+      "day_20191204": {
+        "temperature": "-4℃~8℃",
+        "weather": "晴",
+        "weather_id": {
+          "fa": "00",
+          "fb": "00"
+        },
+        "wind": "东北风微风",
+        "week": "星期三",
+        "date": "20191204"
+      },
+      "day_20191205": {
+        "temperature": "-6℃~3℃",
+        "weather": "晴",
+        "weather_id": {
+          "fa": "00",
+          "fb": "00"
+        },
+        "wind": "南风微风",
+        "week": "星期四",
+        "date": "20191205"
+      },
+      "day_20191206": {
+        "temperature": "-5℃~3℃",
+        "weather": "晴",
+        "weather_id": {
+          "fa": "00",
+          "fb": "00"
+        },
+        "wind": "东北风微风",
+        "week": "星期五",
+        "date": "20191206"
+      },
+      "day_20191207": {
+        "temperature": "-4℃~7℃",
+        "weather": "晴",
+        "weather_id": {
+          "fa": "00",
+          "fb": "00"
+        },
+        "wind": "持续无风向微风",
+        "week": "星期六",
+        "date": "20191207"
+      },
+      "day_20191208": {
+        "temperature": "-4℃~7℃",
+        "weather": "晴",
+        "weather_id": {
+          "fa": "00",
+          "fb": "00"
+        },
+        "wind": "持续无风向微风",
+        "week": "星期日",
+        "date": "20191208"
+      }
+    }
+  },
+  "error_code": 0
+}

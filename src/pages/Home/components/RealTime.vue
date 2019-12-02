@@ -1,20 +1,23 @@
 <template>
   <div class='realTime'>
-    <div class='temp'><span class='temp-value'>2</span>℃</div>
+    <div class='temp'><span class='temp-value'>{{sk.temp}}</span>℃</div>
     <div class='info'>
       <div class='wind'>
-        <div class='wind-direction'><label>当前风向：</label>西风</div>
-        <div class='wind-strength'><label>当前风力：</label>2级</div>
+        <div class='wind-direction'><label>当前风向：</label>{{sk.wind_direction}}</div>
+        <div class='wind-strength'><label>当前风力：</label>{{sk.wind_strength}}</div>
       </div>
-      <div class='humidity'><label>当前湿度：</label>4%</div>
-      <div class='updata-time'><label>更新时间：</label>14:25</div>
+      <div class='humidity'><label>当前湿度：</label>{{sk.humidity}}</div>
+      <div class='updata-time'><label>更新时间：</label>{{sk.time}}</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RealTime'
+  name: 'RealTime',
+  props: {
+    sk: Object
+  }
 }
 </script>
 

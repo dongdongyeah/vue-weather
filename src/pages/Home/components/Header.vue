@@ -4,17 +4,28 @@
       <router-link to='/city'>
         <span class='iconfont city-list'>&#xec70;</span>
       </router-link>
-      <span class='city-name'>邯郸</span>
-      <span class='iconfont day-night'>&#xe666;</span>
+      <span class='city-name'>{{headerToday.city}}</span>
+      <span v-if='isDay()' class='iconfont day-night'>&#xe672;</span>
+      <span v-else class='iconfont day-night'>&#xe666;</span>
     </div>
-    <div class='date'>2019/11/30</div>
-    <div class='week'>星期六</div>
+    <div class='date'>{{headerToday.date_y}}</div>
+    <div class='week'>{{headerToday.week}}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    headerToday: Object
+  },
+  methods: {
+    /* 判断是白天还是黑夜 */
+    isDay () {
+      let now = new Date().getHours()
+      return now > 6 && now < 19
+    }
+  }
 }
 </script>
 
