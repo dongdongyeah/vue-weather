@@ -24,15 +24,16 @@ export default {
 
 <style lang='stylus' scoped>
 .header
-  height: .6rem
-  line-height: .6rem
-  font-size: .3rem
+  height: .8rem
+  line-height: .8rem
+  font-size: .4rem
   text-align: center
   background: rgb(228, 241, 254)
   color: #666
 .today
   display: flex
-  padding: .2rem 1rem
+  justify-content: center
+  padding: .2rem 0 .2rem
   font-size: .3rem
   line-height: .4rem
   background: rgb(228, 241, 254)
@@ -42,9 +43,9 @@ export default {
   .date
     width: 2.5rem
   .temp
-    width: 2.3rem
-  .weather
     width: 2.5rem
+  .weather
+    width: 3.5rem
     .iconfont
       margin-left: .1rem
       font-size: .3rem

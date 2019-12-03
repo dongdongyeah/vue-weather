@@ -4,7 +4,7 @@
       <router-link to='/city'>
         <span class='iconfont city-list'>&#xec70;</span>
       </router-link>
-      <span class='city-name'>{{headerToday.city}}</span>
+      <span class='city-name'>{{this.$store.state.city}}</span>
       <span v-if='isDay()' class='iconfont day-night'>&#xe672;</span>
       <span v-else class='iconfont day-night'>&#xe666;</span>
     </div>

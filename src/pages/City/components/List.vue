@@ -2,7 +2,7 @@
   <div class='list'>
     <div class='title'>当前城市</div>
     <div class='current-city'>
-      <div class='cityname border'>{{currentcity}}</div>
+      <div class='cityname border'>{{this.$store.state.city}}</div>
     </div>
     <div class='title'>热门城市</div>
     <div class='hot-city'>
@@ -10,6 +10,7 @@
        class='cityname border'
        v-for='item of list'
        :key='item.id'
+       @click='handleclick(item.district)'
       >
         {{item.district}}
       </div>
@@ -23,6 +24,12 @@ export default {
   props: {
     list: Array,
     currentcity: String
+  },
+  methods: {
+    handleclick (city) {
+      this.$store.dispatch('changeCity', city)
+      this.$router.push('/')
+    }
   }
 }
 </script>

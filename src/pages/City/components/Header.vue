@@ -63,8 +63,8 @@ export default {
   methods: {
     handleclick (e) {
       this.keyword = e.target.children[0].innerText
+      this.$store.dispatch('changeCity', this.keyword)
       this.$router.push('/')
-      this.$emit('changecity', this.keyword)
     }
   }
 }

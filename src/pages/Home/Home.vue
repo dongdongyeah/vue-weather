@@ -40,7 +40,7 @@ export default {
     getDate () {
       axios.get(this.httpApi + '/index.json', {
         key: '10c213578f42636af4a2757fb63b28a1',
-        cityname: '北京'
+        cityname: this.$store.state.city
       })
         .then(this.getSuccData)
     },

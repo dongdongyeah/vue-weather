@@ -19,23 +19,21 @@ export default {
 <style lang='stylus' scoped>
 .today
   display: flex
-  padding: .2rem 1rem
+  justify-content: center
   font-size: .4rem
   line-height: .4rem
+  padding: .3rem 0 .3rem
   background: rgb(228, 241, 254)
   color: rgb(44, 62, 80)
   background: #fff
+  text-align: center
   .date
-    width: 2rem
+    width: 1.3rem
   .temp
     width: 2.5rem
   .weather
+    width: 3.5rem
     .iconfont
       margin-left: .1rem
       font-size: .4rem
-.forecast
-  text-align: center
-  padding: .2rem 0
-  line-height: .4rem
-  font-size: .3rem
 </style>

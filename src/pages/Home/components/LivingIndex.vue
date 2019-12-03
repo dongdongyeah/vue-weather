@@ -52,9 +52,9 @@ export default {
 
 <style lang='stylus' scoped>
 .header
-  height: .6rem
-  line-height: .6rem
-  font-size: .3rem
+  height: .8rem
+  line-height: .8rem
+  font-size: .4rem
   text-align: center
   background: rgb(228, 241, 254)
   color: #666
@@ -83,6 +83,8 @@ export default {
       overflow: hidden
       white-space: nowrap
       text-overflow: ellipsis
+      box-sizing: border-box
+      padding: 0 .2rem
     .content :hover
       color: red
 </style>
