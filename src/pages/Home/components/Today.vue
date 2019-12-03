@@ -2,7 +2,7 @@
   <div class='today border-topbottom'>
     <div class='date'>今天</div>
     <div class='temp'>{{today.temperature}}</div>
-    <div class='weather'>{{today.weather}}<span class='iconfont'>&#xe642;</span></div>
+    <div class='weather'>{{today.weather}}<img v-if='this.today.weather_id' class='img' :src='url'/></div>
   </div>
 </template>
 
@@ -10,8 +10,21 @@
 
 export default {
   name: 'Today',
+  data () {
+    return {
+      nightUrl: '../../../../static/weather-icon/night',
+      dayUrl: '../../../../static/weather-icon/day'
+    }
+  },
   props: {
-    today: Object
+    today: Object,
+    isDay: Function
+  },
+  computed: {
+    url () {
+      let url = this.isDay ? (this.dayUrl + '/' + this.today.weather_id.fa + '.png') : (this.nightUrl + '/' + this.today.weather_id.fa + '.png')
+      return url
+    }
   }
 }
 </script>
@@ -21,11 +34,10 @@ export default {
   display: flex
   justify-content: center
   font-size: .4rem
-  line-height: .4rem
+  line-height: .8rem
   padding: .3rem 0 .3rem
-  background: rgb(228, 241, 254)
-  color: rgb(44, 62, 80)
-  background: #fff
+  color: #fff
+  background: rgb(137, 196, 244)
   text-align: center
   .date
     width: 1.3rem
@@ -33,7 +45,6 @@ export default {
     width: 2.5rem
   .weather
     width: 3.5rem
-    .iconfont
-      margin-left: .1rem
-      font-size: .4rem
+    .img
+      margin-left: .2rem
 </style>

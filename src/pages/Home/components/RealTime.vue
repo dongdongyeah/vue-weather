@@ -26,13 +26,12 @@ export default {
   display: flex
   flex-direction: column
   padding: .4rem
+  color: rgb(103, 128, 159)
   .temp
     font-size: .8rem
     font-weight: bold
-    color: rgb(103, 128, 159)
     .temp-value
       font-size: 2rem
   .info
-    color: rgb(228, 241, 254)
     line-height: .35rem
 </style>

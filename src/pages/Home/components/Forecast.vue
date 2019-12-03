@@ -8,7 +8,9 @@
     >
       <div class='date'>{{item.date}}</div>
       <div class='temp'>{{item.temperature}}</div>
-      <div class='weather'>{{item.weather}}<span class='iconfont'>&#xe642;</span></div>
+      <div class='weather'>
+        <img v-if='item' class='img' :src='dayUrl + "/" + item.weather_id.fa + ".png"'/>
+      </div>
     </div>
   </div>
 </template>
@@ -16,8 +18,19 @@
 <script>
 export default {
   name: 'Forecast',
+  data () {
+    return {
+      dayUrl: '../../../../static/weather-icon/day'
+    }
+  },
   props: {
     futureList: Object
+  },
+  computed: {
+    url () {
+      let url = this.dayUrl + '/' + this.futureList.item.weather_id.fa + '.png'
+      return url
+    }
   }
 }
 </script>
@@ -33,20 +46,17 @@ export default {
 .today
   display: flex
   justify-content: center
-  padding: .2rem 0 .2rem
-  font-size: .3rem
-  line-height: .4rem
-  background: rgb(228, 241, 254)
-  color: rgb(44, 62, 80)
-  background: #fff
+  align-items: center
+  padding: .2rem 0 .2rem 0
+  font-size: .35rem
+  line-height: .35rem
+  color: #fff
+  background: rgb(137, 196, 244)
   text-align: center
   .date
-    width: 2.5rem
+    width: 2.2rem
   .temp
-    width: 2.5rem
+    width: 2rem
   .weather
-    width: 3.5rem
-    .iconfont
-      margin-left: .1rem
-      font-size: .3rem
+    width: 2rem
 </style>

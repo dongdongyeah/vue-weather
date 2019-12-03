@@ -15,9 +15,9 @@
          class='border-top'
          v-for='item of keywordList'
          :key='item.id'
-         @click='handleclick'
+         @click='handleclick(item.district)'
          >
-         <span class='cityname'>{{item.district}}</span>, {{item.city}}市, {{item.province}}省
+         {{item.district}}, {{item.city}}市, {{item.province}}省
         </li>
         <li
          class='notdata'
@@ -61,9 +61,8 @@ export default {
     }
   },
   methods: {
-    handleclick (e) {
-      this.keyword = e.target.children[0].innerText
-      this.$store.dispatch('changeCity', this.keyword)
+    handleclick (cityname) {
+      this.$store.dispatch('changeCity', cityname)
       this.$router.push('/')
     }
   }

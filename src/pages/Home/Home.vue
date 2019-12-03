@@ -1,6 +1,9 @@
 <template>
   <div class='home'>
-    <home-header :headerToday='today'></home-header>
+    <home-header
+     :headerToday='today'
+     :isDay='isDay'
+    ></home-header>
     <real-time :sk='sk'></real-time>
     <today :today='today'></today>
     <forecast :futureList='future'></forecast>
@@ -50,6 +53,11 @@ export default {
         this.sk = res.data.result.sk
         this.future = res.data.result.future
       }
+    },
+    /* 判断是白天还是黑夜 */
+    isDay () {
+      let now = new Date().getHours()
+      return now > 6 && now < 19
     }
   }
 }
@@ -57,6 +65,6 @@ export default {
 
 <style lang='stylus' scoped>
 .home
-  background: rgb(137, 196, 244)
+  background: rgb(228, 241, 254)
   color: #fff
 </style>

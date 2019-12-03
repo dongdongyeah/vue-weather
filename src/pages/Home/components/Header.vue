@@ -17,14 +17,8 @@
 export default {
   name: 'HomeHeader',
   props: {
-    headerToday: Object
-  },
-  methods: {
-    /* 判断是白天还是黑夜 */
-    isDay () {
-      let now = new Date().getHours()
-      return now > 6 && now < 19
-    }
+    headerToday: Object,
+    isDay: Function
   }
 }
 </script>
@@ -33,7 +27,8 @@ export default {
 .header
   display: flex
   flex-direction: column
-  padding: .2rem .4rem
+  padding: .3rem .4rem
+  color: rgb(103, 128, 159)
   .city
     display: flex
     flex-direction: row
@@ -43,7 +38,7 @@ export default {
       width: .8rem
       font-size: .5rem
       margin-right: .2rem
-      color: #fff
+      color: rgb(103, 128, 159)
     .city-name
       flex: 1
       font-size: .8rem
