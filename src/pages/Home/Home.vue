@@ -34,16 +34,16 @@ export default {
     }
   },
   created () {
-    /* this.getDate() */
+    this.getDate()
   },
   methods: {
-    /* getDate () {
+    getDate () {
       axios.get(this.httpApi + '/index.json', {
         key: '10c213578f42636af4a2757fb63b28a1',
         cityname: '北京'
       })
         .then(this.getSuccData)
-    }, */
+    },
     getSuccData (res) {
       if (res.data.resultcode === '200' && res.data.reason === 'successed!') {
         this.today = res.data.result.today

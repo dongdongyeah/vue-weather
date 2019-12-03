@@ -1,0 +1,150 @@
+{
+  "resultcode": "200",
+  "reason": "successed",
+  "result": [
+    {
+      "id": "1",
+      "province": "北京",
+      "city": "北京",
+      "district": "北京"
+    },
+    {
+      "id": "16",
+      "province": "上海",
+      "city": "上海",
+      "district": "上海"
+    },
+    {
+      "id": "2235",
+      "province": "广东",
+      "city": "深圳",
+      "district": "深圳"
+    },
+    {
+      "id": "2202",
+      "province": "广东",
+      "city": "广州",
+      "district": "广州"
+    },
+    {
+      "id": "28",
+      "province": "天津",
+      "city": "天津",
+      "district": "天津"
+    },
+    {
+      "id": "41",
+      "province": "重庆",
+      "city": "重庆",
+      "district": "重庆"
+    },
+    {
+      "id": "2536",
+      "province": "海南",
+      "city": "三亚",
+      "district": "三亚"
+    },
+    {
+      "id": "393",
+      "province": "河北",
+      "city": "石家庄",
+      "district": "石家庄"
+    },
+    {
+      "id": "655",
+      "province": "陕西",
+      "city": "西安",
+      "district": "西安"
+    },
+    {
+      "id": "756",
+      "province": "山东",
+      "city": "济南",
+      "district": "济南"
+    },
+    {
+      "id": "1217",
+      "province": "河南",
+      "city": "郑州",
+      "district": "郑州"
+    },
+    {
+      "id": "1341",
+      "province": "江苏",
+      "city": "南京",
+      "district": "南京"
+    },
+    {
+      "id": "1419",
+      "province": "湖北",
+      "city": "武汉",
+      "district": "武汉"
+    },
+    {
+      "id": "1512",
+      "province": "浙江",
+      "city": "杭州",
+      "district": "杭州"
+    },
+    {
+      "id": "1592",
+      "province": "安徽",
+      "city": "合肥",
+      "district": "合肥"
+    },
+    {
+      "id": "1683",
+      "province": "福建",
+      "city": "厦门",
+      "district": "厦门"
+    },
+    {
+      "id": "1749",
+      "province": "江西",
+      "city": "南昌",
+      "district": "南昌"
+    },
+    {
+      "id": "1845",
+      "province": "湖南",
+      "city": "长沙",
+      "district": "长沙"
+    },
+    {
+      "id": "2037",
+      "province": "四川",
+      "city": "成都",
+      "district": "成都"
+    },
+    {
+      "id": "2312",
+      "province": "云南",
+      "city": "昆明",
+      "district": "昆明"
+    },
+    {
+      "id": "2535",
+      "province": "海南",
+      "city": "海口",
+      "district": "海口"
+    },
+    {
+      "id": "2555",
+      "province": "香港",
+      "city": "香港",
+      "district": "香港"
+    },
+    {
+      "id": "2557",
+      "province": "澳门",
+      "city": "澳门",
+      "district": "澳门"
+    },
+    {
+      "id": "2560",
+      "province": "台湾",
+      "city": "台北",
+      "district": "台北"
+    }
+  ]
+}

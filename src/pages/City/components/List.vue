@@ -2,41 +2,28 @@
   <div class='list'>
     <div class='title'>当前城市</div>
     <div class='current-city'>
-      <div class='cityname border'>邯郸</div>
+      <div class='cityname border'>{{currentcity}}</div>
     </div>
     <div class='title'>热门城市</div>
     <div class='hot-city'>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
-      <div class='cityname border'>北京</div>
+      <div
+       class='cityname border'
+       v-for='item of list'
+       :key='item.id'
+      >
+        {{item.district}}
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CityList'
+  name: 'CityList',
+  props: {
+    list: Array,
+    currentcity: String
+  }
 }
 </script>
 
