@@ -11,7 +11,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      
+      '/weather': {
+        target: 'http://v.juhe.cn/weather',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/weather': ''
+        }
+      }
     },
 
     // Various Dev Server settings

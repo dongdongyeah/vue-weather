@@ -18,7 +18,6 @@ import Today from '@/pages/Home/components/Today'
 import Forecast from '@/pages/Home/components/Forecast'
 import LivingIndex from '@/pages/Home/components/LivingIndex'
 import axios from 'axios'
-axios.defaults.baseURL = '/weather'
 export default {
   name: 'Home',
   components: {
@@ -33,21 +32,27 @@ export default {
       httpApi: process.env.API_HOST,
       today: {},
       sk: {},
-      future: {}
+      future: {},
+      key: '10c213578f42636af4a2757fb63b28a1'
     }
   },
   created () {
-    this.getDate()
+    /* this.getDate() */
   },
   methods: {
     getDate () {
-      axios.get(this.httpApi + '/index.json', {
-        key: '10c213578f42636af4a2757fb63b28a1',
-        cityname: this.$store.state.city
+      /* axios.get(this.httpApi + '/index.json', { */
+      axios.get('/index', {
+        baseURL: '/weather',
+        params: {
+          key: this.key,
+          cityname: this.$store.state.city
+        }
       })
         .then(this.getSuccData)
     },
     getSuccData (res) {
+      console.log(res)
       if (res.data.resultcode === '200' && res.data.reason === 'successed!') {
         this.today = res.data.result.today
         this.sk = res.data.result.sk

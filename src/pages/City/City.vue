@@ -17,7 +17,6 @@
 import CityHeader from '@/pages/City/components/Header'
 import CityList from '@/pages/City/components/List'
 import axios from 'axios'
-axios.defaults.baseURL = '/static/not-ignore'
 export default {
   name: 'City',
   components: {
@@ -37,8 +36,8 @@ export default {
   methods: {
     getCityList () {
       axios.all([
-        axios.get('/city.json'),
-        axios.get('/hotCityList.json')
+        axios.get('/city.json', {baseURL: '/static/not-ignore'}),
+        axios.get('/hotCityList.json', {baseURL: '/static/not-ignore'})
       ])
         .then(
           axios.spread(this.getSuccCity)

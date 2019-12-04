@@ -43,7 +43,7 @@ export default {
       flex: 1
       font-size: .8rem
     .day-night
-      font-size: .5rem
+      font-size: 1rem
       text-align: right
   .date
     text-align: right
