@@ -43,6 +43,7 @@ export default {
   },
   activated () {
     if (this.lastCity !== this.$store.state.city) {
+      this.lastCity = this.$store.state.city
       this.getDate()
     }
   },

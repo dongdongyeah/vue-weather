@@ -59,15 +59,16 @@ export default {
   background: rgb(228, 241, 254)
   color: #666
 .living-index
+  width: 100%
   display: flex
   flex-wrap: wrap
+  justify-content: space-around
+  padding: 0
   position: absolute
   color: #666
   text-align: center
-  padding: 0
-  margin: 0
   .index
-    width: 2.5rem
+    width: 33%
     height: 0
     padding-bottom: 2.5rem
     .title
