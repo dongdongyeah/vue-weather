@@ -34,6 +34,7 @@ export default {
     flex-direction: row
     height: 1rem
     line-height: 1rem
+    margin-bottom: .2rem
     .city-list
       width: .8rem
       font-size: .5rem

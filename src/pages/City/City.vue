@@ -30,7 +30,7 @@ export default {
       cityname: ''
     }
   },
-  created () {
+  mounted () {
     this.getCityList()
   },
   methods: {

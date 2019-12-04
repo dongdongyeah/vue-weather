@@ -33,11 +33,18 @@ export default {
       today: {},
       sk: {},
       future: {},
-      key: '10c213578f42636af4a2757fb63b28a1'
+      key: '10c213578f42636af4a2757fb63b28a1',
+      lastCity: ''
     }
   },
-  created () {
-    /* this.getDate() */
+  mounted () {
+    this.lastCity = this.$store.state.city
+    this.getDate()
+  },
+  activated () {
+    if (this.lastCity !== this.$store.state.city) {
+      this.getDate()
+    }
   },
   methods: {
     getDate () {

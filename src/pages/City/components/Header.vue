@@ -62,8 +62,9 @@ export default {
   },
   methods: {
     handleclick (cityname) {
-      this.$store.dispatch('changeCity', cityname)
+      this.$store.commit('changeCity', cityname)
       this.$router.push('/')
+      this.keyword = ''
     }
   }
 }
